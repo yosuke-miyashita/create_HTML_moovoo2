@@ -8,5 +8,10 @@
         "js": ["js/jquery-3.3.1.min.js","js/window.js"],
         "css": ["css/style.css"]
     }],
+    "icons": {
+        "16": "img/icon16.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+    },
     "web_accessible_resources": ["img/moovoo_emblem.png"]
 }
