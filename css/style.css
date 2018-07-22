@@ -1,0 +1,94 @@
+#akasananosa_chrome_extension{
+	position:fixed;
+	z-index:2;
+    bottom: 30px;
+    right: 15px;
+}
+#akasananosa_chrome_extension :hover{
+	background-color: rgba(0,0,0,0.5);
+}
+.insert_image {
+	overflow: hidden;	/*拡大時にはみ出た部分を隠す*/
+}
+.insert_image img {
+	display: block;
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+}
+.insert_image img:hover {
+	transform: scale(1.1);	/*画像の拡大率*/
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+}
+
+#input_area{
+	z-index: 2;
+
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	margin: auto;
+	width: 300px;
+	height: 200px;
+
+	background-color: #c0c0c0;
+
+	border: solid 2px #67c5ff;
+    border-radius: 3px;
+
+    text-align:  center;
+
+    opacity: 0.9;
+
+}
+#close_input_area{
+	display: inline-block;
+    text-decoration: none;
+    transition: .1s;
+}
+#close_input_area:hover{
+	transform: rotateY(360deg);
+}
+#itemData_form{
+	position: absolute;
+	margin-top: 5px;
+}
+#itemData_form ul li{
+	list-style: none;
+	margin-left: 2px;
+	margin-top: 5px;
+}
+#itemData_form ul{
+
+}
+#itemData_form li{
+
+}
+#itemData_form label{
+}
+#itemData_form input{
+	float: right;
+}
+
+
+
+
+#create_html{
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    background: white;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: .1s;
+
+}
+#create_html:hover{
+	background: #67c5ff;
+    color: white;
+	transform: rotateY(360deg);
+}
+
+

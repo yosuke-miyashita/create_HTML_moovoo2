@@ -1,0 +1,12 @@
+{
+    "name": "Create_amazon_HTML",
+    "version": "0.2.3",
+    "manifest_version": 2,
+    "description": "アフィリエイトリンクが入ったHTMLコードをタイトルの下のButtonをクリックするだけで生成してくれます。",
+    "content_scripts": [{
+        "matches": ["https://mvc.moov.ooo/*"],
+        "js": ["js/jquery-3.3.1.min.js","js/window.js"],
+        "css": ["css/style.css"]
+    }],
+    "web_accessible_resources": ["img/moovoo_emblem.png"]
+}
