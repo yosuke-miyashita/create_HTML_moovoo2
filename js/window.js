@@ -33,7 +33,7 @@ function insertForm(){
         <ul>
             <li class="input_item_name">
                 <label for="email">製品名：</label>
-                <input type="text" id="item_name" placeholder="moovooメモ張" >  
+                <input type="text" id="item_name" placeholder="moovooメモ張" >
             </li>
             <li class="input_price">
                 <label for="email">価格：</label>
@@ -84,7 +84,7 @@ function create_html(){
 
     }else{
         alert("画像URL先が画像ではないようです。画像のアドレスを貼り付けてください。");
-        return;        
+        return;
     }
     const item_url = document.forms.itemData_form.item_url.value;
     if (!item_url.match(/http/)) {
@@ -94,79 +94,84 @@ function create_html(){
 
     const html = `
     <style type="text/css">
-        .amazon_stage ul {
-          list-style: none !important;
-          padding-left: 5px !important;
-        }
-        .amazon_stage{
-            max-width: 600px !important;
-            padding: 0.5em 1em !important;
-            margin: 2em auto !important;
-            border: double 5px #4ec4d3 !important;  
+      .mv-amazon_stage ul {
+        list-style: none;
+        padding-left: 5px;
+      }
+      .mv-amazon_stage{
+          max-width: 500px;
+          padding: 0.5em 1em;
+          margin: 2em auto;
+          border: 4px solid #D9F4FF;
+          border-radius: 10px;
+          text-align:left;
+          font-size:small;
+          zoom: 1;
+          overflow: hidden;
+      }
+      .mv-amazon_image a img{
+          float:left;
+          margin:0px 10px 0px -5px;
+          width: 120px;
+          height: 120px;
+          object-fit: contain;
+      }
+      .mv-amazon_info{
+          line-height: 1.5em;
+          zoom: 1;
+          overflow: hidden;
+          margin-top: auto;
+          margin-bottom: auto;
+      }
+      .mv-amazon_item_name{
+          margin-bottom:10px;
+          font-size: 120%;
+          font-weight: bold;
+      }
+      .mv-amazon_price {
+        font-size: 110%;
+      }
+      .mv-amazon_btn {
+          display: block;
+          max-width: 140px;
+          padding: 0.8em;
+          text-align: center;
+          text-decoration: none;
+          color: #ec6e0e;
+          border: 2px solid #ec6e0e;
+          border-radius: 3px;
+          transition: .4s;
+          margin-top: 15px;
+          font-size: 14px;
+          font-weight: bold;
+      }
+      .mv-amazon_btn i {
+        margin-left: 5px;
+      }
+      .mv-amazon_btn:hover {
+          background: #ec6e0e;
+          color: #fff;
+      }
 
-            text-align:left !important;
-            font-size:small !important;
-            zoom: 1 !important;
-            overflow: hidden !important;
-        }
-        .amazon_image a img{
-            float:left !important;
-            margin:0px 10px 0px -5px !important;
-            width: 120px !important;
-            height: 120px !important;
-            object-fit: contain !important;
-        }
-        .amazon_info{
-            line-height:100% !important;
-            zoom: 1 !important;
-            overflow: hidden !important;    
-
-            margin-top: auto !important;
-            margin-bottom: auto !important;
-        }
-        .amazon_item_name{
-            margin:10px 0 !important;
-            line-height:120% !important;
-            color: #000000  !important;
-        }
-        .amazon_btn {
-            display: block !important;
-            max-width: 120px !important;
-            padding: 0.8em !important;
-            text-align: center !important;
-            text-decoration: none !important;
-            color: #ffa500 !important;
-            border: 2px solid #ffa500 !important;
-            border-radius: 3px !important;
-            transition: .4s !important;
-            margin-top: 15px !important;
-            font-size: 12px !important;
-            font-weight: bold !important;
-        }
-        .amazon_btn:hover {
-            background: #ffa500 !important;
-            color: #fff !important;
-        }   
-
-        </style>
-        <div class="amazon_stage">
-            <div class="amazon_image">
+    </style>
+        <div class="mv-amazon_stage">
+            <div class="mv-amazon_image">
                 <a href="${item_url}" target="blank">
                     <img src="${item_img}">
                 </a>
             </div>
-            <div class="amazon_info">
+            <div class="mv-amazon_info">
                 <ul>
                     <li>
-                        <div class="amazon_item_name"><a href="${item_url}" target="blank">${item_name}</a></div>
+                        <div class="mv-amazon_item_name"><a href="${item_url}" target="blank">${item_name}</a></div>
                     </li>
                     <li>
-                        <div class="amazon_price">￥${price}(※${date}時点)</div>
+                        <div class="mv-amazon_price">￥${price}(※${date}時点)</div>
                     </li>
                     <li>
-                        <a href="${item_url}" target="blank" class="amazon_btn">購入</a>
+                        <a href="${item_url}" target="blank" class="mv-amazon_btn">購入<i class="fa fa-external-link" aria-hidden="true"></i></a>
                     </li>
-                </ul> 
+                </ul>
             </div>
         </div>
         `;
